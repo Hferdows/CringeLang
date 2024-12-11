@@ -1,0 +1,78 @@
+
+    digraph textX {
+    fontname = "Bitstream Vera Sans"
+    fontsize = 8
+    node[
+        shape=record,
+        style=filled,
+        fillcolor=aliceblue
+    ]
+    nodesep = 0.3
+    edge[dir=black,arrowtail=empty]
+
+
+4797141008[ label="{Program|username: STRING\l}"]
+
+4796652176[ label="{*Command|}"]
+
+4796656336[ label="{BruhCommand|times: INT\l}"]
+
+4967105200[ label="{RizzCommand|name: STRING\l}"]
+
+4967104896[ label="{VarDeclaration|varType: VarType\lvar: ID\l}"]
+
+4796985808[ label="{BasedCommand|times: INT\l}"]
+
+4796781968[ label="{*Value|}"]
+
+4797026608[ label="{*Bool|}"]
+
+4795399792[ label="{Var|}"]
+
+4967219280[ label="{VarAssign|}"]
+
+4795279184[ label="{Loop|}"]
+
+4795278992[ label="{JKCommand|times: INT\l}"]
+
+4796944416[ label="{Equality|var: ID\l}"]
+
+
+
+4797141008 -> 4796652176[arrowtail=diamond, dir=both, headlabel="commands 0..*"]
+4796652176 -> 4796656336 [dir=back]
+4796652176 -> 4967105200 [dir=back]
+4796652176 -> 4967104896 [dir=back]
+4796652176 -> 4795279184 [dir=back]
+4796652176 -> 4796985808 [dir=back]
+4796652176 -> 4795278992 [dir=back]
+4796652176 -> 4796944416 [dir=back]
+4796652176 -> 4967219280 [dir=back]
+4967104896 -> 4796781968[arrowtail=diamond, dir=both, headlabel="varValue "]
+4796781968 -> 4797026608 [dir=back]
+4797026608 -> 4795399792 [dir=back]
+4967219280 -> 4795399792[arrowtail=diamond, dir=both, headlabel="var "]
+4967219280 -> 4796781968[arrowtail=diamond, dir=both, headlabel="varValue "]
+4795279184 -> 4797026608[arrowtail=diamond, dir=both, headlabel="bool "]
+4795279184 -> 4796652176[arrowtail=diamond, dir=both, headlabel="loopCommands 0..*"]
+4796944416 -> 4796781968[arrowtail=diamond, dir=both, headlabel="varValue "]
+match_rules [ shape=plaintext, label=< <table>
+	<tr>
+		<td><b>BoolType</b></td><td>bool</td>
+	</tr>
+	<tr>
+		<td><b>IntType</b></td><td>int</td>
+	</tr>
+	<tr>
+		<td><b>PhoneNumber</b></td><td>(\\+\\d{1,2}\\s)?\\(\\d{3}\\)[\\s.-]\\d{3}[\\s.-]\\d{4}</td>
+	</tr>
+	<tr>
+		<td><b>StringType</b></td><td>string</td>
+	</tr>
+	<tr>
+		<td><b>VarType</b></td><td></td>
+	</tr>
+</table> >]
+
+
+}

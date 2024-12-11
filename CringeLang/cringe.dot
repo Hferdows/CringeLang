@@ -1,0 +1,68 @@
+
+    digraph textX {
+    fontname = "Bitstream Vera Sans"
+    fontsize = 8
+    node[
+        shape=record,
+        style=filled,
+        fillcolor=aliceblue
+    ]
+    nodesep = 0.3
+    edge[dir=black,arrowtail=empty]
+
+
+4377841008[ label="{Program|}"]
+
+4378052880[ label="{*Command|}"]
+
+4378050640[ label="{BruhCommand|times: INT\l}"]
+
+4377906528[ label="{RizzCommand|name: STRING\lnumber: PhoneNumber\l}"]
+
+4377907744[ label="{VarDeclaration|varType: VarType\lvarValue: Value\l}"]
+
+4377308400[ label="{Loop|bool: Bool\l}"]
+
+4377188432[ label="{Equality|var: ID\lvarValue: Value\l}"]
+
+
+
+4377841008 -> 4378052880[arrowtail=diamond, dir=both, headlabel="commands 0..*"]
+4378052880 -> 4378050640 [dir=back]
+4378052880 -> 4377906528 [dir=back]
+4378052880 -> 4377907744 [dir=back]
+4378052880 -> 4377308400 [dir=back]
+4378052880 -> 4377188432 [dir=back]
+4377308400 -> 4378052880[arrowtail=diamond, dir=both, headlabel="commands 0..*"]
+match_rules [ shape=plaintext, label=< <table>
+	<tr>
+		<td><b>Based</b></td><td>Yooo who based 😭</td>
+	</tr>
+	<tr>
+		<td><b>Bool</b></td><td>ligma|notLigma</td>
+	</tr>
+	<tr>
+		<td><b>BoolType</b></td><td>bool</td>
+	</tr>
+	<tr>
+		<td><b>IntType</b></td><td>int</td>
+	</tr>
+	<tr>
+		<td><b>JK</b></td><td>JK 😭</td>
+	</tr>
+	<tr>
+		<td><b>PhoneNumber</b></td><td>(\\+\\d{1,2}\\s)?\\(\\d{3}\\)[\\s.-]\\d{3}[\\s.-]\\d{4}</td>
+	</tr>
+	<tr>
+		<td><b>StringType</b></td><td>string</td>
+	</tr>
+	<tr>
+		<td><b>Value</b></td><td>INT|STRING</td>
+	</tr>
+	<tr>
+		<td><b>VarType</b></td><td></td>
+	</tr>
+</table> >]
+
+
+}

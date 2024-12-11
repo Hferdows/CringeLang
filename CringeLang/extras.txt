@@ -1,0 +1,119 @@
+Program:
+  'begin'
+    commands*=Command
+  'end'
+;
+
+Command:
+  InitialCommand | MoveCommand | JumpCommand
+;
+
+InitialCommand:
+  'initial' x=INT ',' y=INT
+;
+
+MoveCommand:
+  direction=Direction (steps=INT)?
+
+;
+
+Direction:
+  "up"|"down"|"left"|"right"|"upleft"|"upright"|"downleft"|"downright"|"spin360"
+;
+
+JumpCommand:
+  'jump' (steps=INT)?
+;
+
+Comment:
+  /\/\/.*$/
+;
+
+
+Hey there cutie, you a chiller? I know I'm just a chill lil guy... Movie this Friday how bout it?!
+What do you think will happen if u fall?
+
+(If they answer)
+
+Actually on second thought probably nothing cuz I'll catch u everytime
+
+(This is tried and tested)
+
+PhoneNumber:
+  /^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$/
+;
+
+
+Program:
+  'reddit username: ' username=STRING
+    commands*=Command
+  'It's Joever'
+;
+
+Command:
+  RizzCommand | BruhCommand | VarDeclaration | Loop | Based | JK | Equality
+;
+
+RizzCommand:
+  'rizz' name=STRING '@' number=PhoneNumber \U0001F62D
+;
+
+BruhCommand:
+  'Bruh' times=INT '\U0001F62D'
+;
+
+VarDeclaration:
+  'I’m not fried. See! I can create a(n)' varType=VarType ID '=' varValue=Value '\U0001F62D'
+;
+
+Loop:
+  'while' '(' bool=Bool ')' '{'
+    commands*=Command
+  '}'
+;
+
+Based:
+  'Yooo who's based'
+;
+
+JK:
+  'JK'
+;
+
+Equality:
+  ID '==' varValue=Value
+;
+
+Value:
+  INT | STRING | Bool
+;
+
+VarType:
+  IntType | StringType | BoolType
+;
+
+IntType:
+  'int'
+;
+
+StringType:
+  'string'
+;
+
+BoolType:
+  'bool'
+;
+
+PhoneNumber:
+  /(\\+\\d{1,2}\\s)?\\(\\d{3}\\)[\\s.-]\\d{3}[\\s.-]\\d{4}/
+;
+
+Bool:
+  'ligma' | 'notLigma'
+;
+
+Im not fried. See! I can create a(n) int a = 3 😭
+Im not fried. See! I can create a(n) bool i = ligma 😭
+while (a) {
+    Im not fried. See! I can create a(n) int a = 3 😭
+    i = notLigma 😭

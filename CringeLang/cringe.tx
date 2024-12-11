@@ -1,0 +1,26 @@
+Program: 
+  'reddit username:' username=STRING
+    commands*=Command
+  'its joever'
+;
+Command: BruhCommand | RizzCommand | VarDeclaration | Loop | BasedCommand | JKCommand | Equality | VarAssign;
+BruhCommand: 'bruh' times=INT '😭';
+RizzCommand: 'rizz' name=STRING '😭';
+VarDeclaration: 'Im not fried. See! I can create a(n)' varType=VarType var=ID '=' varValue=Value '😭';
+BasedCommand: 'Yooo who based' times=INT '😭';
+Value: (INT | STRING | Bool);
+VarType: IntType | StringType | BoolType;
+IntType: 'int';
+StringType: 'string';
+BoolType: 'bool';
+Bool: 'ligma' | 'notLigma' | Var;
+Var: var=ID;
+VarAssign: var=Var '=' varValue=Value '😭';
+PhoneNumber: /(\\+\\d{1,2}\\s)?\\(\\d{3}\\)[\\s.-]\\d{3}[\\s.-]\\d{4}/;
+Loop: 
+'while' '(' bool=Bool ')' '{'
+    loopCommands*=Command
+  '}'
+;
+JKCommand: 'JK' times=INT '😭';
+Equality: var=ID '==' varValue=Value;
